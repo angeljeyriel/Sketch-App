@@ -13,7 +13,7 @@ let color = 'black'
 let x
 let y
 
-canvas.addEventListener('mousedown', (e) => {
+canvas.addEventListener('pointerdown', (e) => {
     isPressed = true
 
     x = e.offsetX
@@ -21,7 +21,7 @@ canvas.addEventListener('mousedown', (e) => {
 
 })
 
-canvas.addEventListener('mouseup', (e) => {
+canvas.addEventListener('pointerup', (e) => {
     isPressed = false
 
     x = undefined
@@ -29,7 +29,7 @@ canvas.addEventListener('mouseup', (e) => {
 
 })
 
-canvas.addEventListener('mousemove', (e) => {
+canvas.addEventListener('pointermove', (e) => {
     if (isPressed) {
         const x2 = e.offsetX
         const y2 = e.offsetY
