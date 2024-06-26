@@ -13,7 +13,8 @@ let color = 'black'
 let x
 let y
 
-canvas.addEventListener('pointerdown', (e) => {
+canvas.addEventListener('touchstart', (e) => {
+    // pointerdown
     isPressed = true
 
     x = e.offsetX
@@ -21,7 +22,8 @@ canvas.addEventListener('pointerdown', (e) => {
 
 })
 
-canvas.addEventListener('pointerup', (e) => {
+canvas.addEventListener('touchend', (e) => {
+    // pointerup
     isPressed = false
 
     x = undefined
@@ -29,7 +31,7 @@ canvas.addEventListener('pointerup', (e) => {
 
 })
 
-canvas.addEventListener('pointermove', (e) => {
+canvas.addEventListener('touchmove', (e) => {
     if (isPressed) {
         const x2 = e.offsetX
         const y2 = e.offsetY
